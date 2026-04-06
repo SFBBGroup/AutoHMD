@@ -17,7 +17,7 @@ If you use AutoHMD in your work, please cite:
 
 ## Requirements
 
-AutoHMD was implemented and tested using **Python 3.12**. The following external software is required:
+AutoHMD was implemented and tested using **Python 3.12**. The following external softwares are required:
 
 | Software | Tested Version | Role |
 |---|---|---|

@@ -59,7 +59,7 @@ cp /path/to/your_protein.pdb prepare/
 
 ### 3. Edit `prepare/config_hMD.conf`
 
-The only required change is the protein filename. All other parameters have validated defaults.
+The only required change is the protein filename. 
 
 ```bash
 INPUT_PDB="your_protein"   # filename without .pdb extension

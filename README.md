@@ -21,10 +21,10 @@ AutoHMD was implemented and tested using **Python 3.12**. The following external
 
 | Software | Tested Version | Role |
 |---|---|---|
-| AMBER / AmberTools | Amber24 | MD engine, `tleap`, `parmed`, `cpptraj`, `pmemd.cuda` |
+| AMBER / AmberTools | [Amber24](https://ambermd.org/AmberMD.php) | MD engine, `tleap`, `parmed`, `cpptraj`, `pmemd.cuda` |
 | PDB2PQR | [3.6.1](https://github.com/Electrostatics/pdb2pqr/releases/tag/v3.6.1) | Protonation state assignment via PROPKA |
-| PDBTools | 2.5.1 | PDB manipulation (`pdb_reres`, `pdb_fixinsert`) |
-| PLIP | 3.12 | Protein–ligand interaction analysis *(optional, additional_analysis only)* |
+| PDBTools | [2.5.1](https://github.com/haddocking/pdb-tools) | PDB manipulation (`pdb_reres`, `pdb_fixinsert`) |
+| PLIP | [2.3.1](https://github.com/pharmai/plip/releases/tag/v2.3.1) | Protein–ligand interaction analysis *(optional, additional_analysis only)* |
 
 By default, AutoHMD loads these dependencies as **environment modules** (`module load`). Users may alternatively modify the execution scripts to use locally installed software, provided all required executables are accessible via `PATH`.
 

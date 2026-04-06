@@ -31,13 +31,13 @@ By default, AutoHMD loads these dependencies as **environment modules** (`module
 Python packages required for the auxiliary and analysis scripts:
 
 ```
-numpy
-matplotlib
+numpy (tested in v2.3.0)
+matplotlib (tested in v3.10.7)
 biopython
-pyyaml
+pyyaml (tested in v6.0.3)
 pandas
 seaborn
-tqdm
+tqdm (tested in v4.67.1)
 ```
 
 ---

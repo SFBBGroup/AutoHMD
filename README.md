@@ -1,4 +1,4 @@
-# AutoHMD — Automated Heated Molecular Dynamics Pipeline
+# AutoHMD — Automated Heated Molecular Dynamics Pipeline for Antibody-Antigen Complexes
 
 AutoHMD is a modular pipeline for the automated preparation and execution of Heated Molecular Dynamics (hMD) simulations using the AMBER suite. Optimized for protein–antibody systems, it streamlines the entire workflow—from raw PDB input to sequential multi-temperature production (310 K → 330 K → 360 K → 390 K) and advanced trajectory analysis.
 

@@ -1,0 +1,102 @@
+# ============================================================
+# PLIP Trajectory Analysis — Unified Configuration File
+# ============================================================
+#
+# CHAIN ASSIGNMENT MODE — choose ONE of the options below:
+#
+#  Option A — AUTO-DETECT (recommended if your system has ACE/NME caps)
+#    Set: auto_detect_chains: true
+#    Leave residue_ranges and reference_for_chains commented out (or null)
+#
+#  Option B — MANUAL (explicit residue ranges)
+#    Set: auto_detect_chains: false
+#    Fill in the residue_ranges block below
+#
+#  Option C — REFERENCE PDB
+#    Set: auto_detect_chains: false
+#    Set: reference_for_chains: "path/to/reference.pdb"
+#    Leave residue_ranges commented out (or empty)
+#
+# ============================================================
+
+
+# --- Trajectory files ---
+trajectory:
+  topology: "../submit/rep0/analysis/rep0_noWat_hMD.prmtop"   # Topology file (prmtop, pdb, etc.)
+  trajectories:                                                # One or more trajectory files
+    - "../submit/rep0/analysis/rep0_noWat_hMD.nc"
+    - "../submit/rep1/analysis/rep0_noWat_hMD.nc"
+    - "../submit/rep2/analysis/rep0_noWat_hMD.nc"
+  reference: null                     # Optional: reference structure for RMSD alignment
+
+
+# --- Frame selection ---
+frames:
+  start: 1                            # First frame to analyze
+  end: -1                             # Last frame (-1 = last frame in trajectory)
+  interval: 32                        # Extract every Nth frame
+
+
+# ============================================================
+# CHAIN ASSIGNMENT — pick ONE mode
+# ============================================================
+
+# --- Option A: AUTO-DETECT ---
+# Logic: fragments starting with ACE residue → Antigen (B)
+#        first non-ACE fragment              → Heavy chain (H)
+#        second non-ACE fragment             → Light chain (L)
+auto_detect_chains: true              # Set to false to use Options B or C
+
+
+# --- Option B: MANUAL residue ranges ---
+# Uncomment and fill in if auto_detect_chains is false
+# residue_ranges:
+#   B: [1, 566]                       # Antigen:     residues 1-566
+#   H: [567, 686]                     # Heavy chain: residues 567-686
+#   L: [687, 799]                     # Light chain: residues 687-799
+
+
+# --- Option C: Reference PDB for chain IDs ---
+# Uncomment if auto_detect_chains is false and residue_ranges is not set
+# reference_for_chains: "reference_with_chains.pdb"
+reference_for_chains: null
+
+
+# ============================================================
+# PLIP ANALYSIS SETTINGS
+# ============================================================
+plip:
+  target_chain: "B"                   # Chain to analyze interactions with (antigen = B)
+
+
+# ============================================================
+# OUTPUT SETTINGS
+# ============================================================
+output:
+  directory: "plip_trajectory_results"
+  prefix: "antibody_antigen"
+
+
+# ============================================================
+# ADVANCED OPTIONS (defaults are usually fine)
+# ============================================================
+
+# Chains to extract and keep in the processed PDB
+chains_to_keep:
+  - H                                 # Heavy chain
+  - L                                 # Light chain
+  - B                                 # Antigen chain
+
+# Residue renumbering start for each chain
+reres_starts:
+  H: 1
+  L: 1
+  B: 1
+
+# Chains that need pdb_fixinsert (typically antibody chains H and L)
+fixinsert_chains:
+  - H
+  - L
+
+# Number of frames per replica (used for timeline plot boundary lines)
+replica_size: 175

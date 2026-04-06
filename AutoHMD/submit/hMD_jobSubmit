@@ -1,0 +1,27 @@
+Universe = vanilla
+Environment = SHELL=/usr/bin/bash;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Executable = executable.sh 
+
+#requirements = (Machine == "your_cluster") 
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = HMR_solvated_system.prmtop,solvated_system.rst7,solvated_system.pdb,nowat_system.rst7,compactTraj_CalcRmsd.py,RMSD_plot.py
+
+#Transferring Output Files
+should_transfer_files = yes
+when_to_transfer_output = ON_EXIT
+
+# Output handling
+log = job_$(Cluster)_$(Process).log
+error = job_$(Cluster)_$(Process).err
+output = job_$(Cluster)_$(Process).out
+
+# Output folder remapping per replica
+transfer_output_files = rep
+transfer_output_remaps = "rep=rep$(Process)"
+
+request_gpus = 1
+request_memory = 4G
+queue 3
+

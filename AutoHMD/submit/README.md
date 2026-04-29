@@ -1,6 +1,6 @@
 # submit/ — Simulation Submission and Execution
 
-This folder contains the files needed to run the full Heated MD simulation protocol, from minimisation through multi-temperature production MD, followed by automatic trajectory compaction, iRMSD calculation, and RMSD plotting.
+This folder contains the files needed to run the full Heated MD simulation protocol, from minimization through multi-temperature production MD, followed by automatic trajectory compaction, iRMSD calculation, and RMSD plotting.
 
 
 ---

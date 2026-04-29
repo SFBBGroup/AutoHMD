@@ -55,12 +55,12 @@ Output will be written to `rep/` in the current directory.
 
 | Step | File | Type | Length | Temperature | Restraints |
 |---|---|---|---|---|---|
-| 1a | `1_water_minimization.in` | Minimisation | 10 000 cycles | — | Solute fixed (1 kcal/mol/Å²) |
-| 1b | `1_part2_system_minimization.in` | Minimisation | 20 000 cycles | — | None |
+| 1a | `1_water_minimization.in` | Minimization | 10 000 cycles | — | Solute fixed (1 kcal/mol/Å²) |
+| 1b | `1_part2_system_minimization.in` | Minimization | 20 000 cycles | — | None |
 | 2 | `2_heat.in` | NVT heating | 500 ps | 0 → 310 K | Heavy atoms 100 kcal/mol/Å² |
 | 3 | `3_Water_density.in` | NPT | 1 ns | 310 K | Heavy atoms 100 kcal/mol/Å² |
 | 4 | `4_Water_densitY_soft.in` | NPT | 1 ns | 310 K | Heavy atoms 10 kcal/mol/Å² |
-| 5 | `5_2nd_Minimization.in` | Minimisation | 10 000 cycles | — | Backbone 10 kcal/mol/Å² |
+| 5 | `5_2nd_Minimization.in` | Minimization | 10 000 cycles | — | Backbone 10 kcal/mol/Å² |
 | 6 | `6_First_equil_10kcalmolA2.in` | NPT | 1 ns | 310 K | Backbone 10 kcal/mol/Å² |
 | 7 | `7_Second_equilibration_1kcalmolA2.in` | NPT | 1 ns | 310 K | Backbone 1 kcal/mol/Å² |
 | 8 | `8_Third_equilibration_01kcalmolA2.in` | NPT | 1 ns | 310 K | Backbone 0.1 kcal/mol/Å² |

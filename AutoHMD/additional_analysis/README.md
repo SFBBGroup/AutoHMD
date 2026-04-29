@@ -8,7 +8,7 @@ This folder contains scripts for protein–protein interaction profiling along t
 ## Prerequisites
 
 - Python 3.12
-- PLIP 3.12
+- PLIP 2.3.1
 - AmberTools (for `cpptraj`, used to extract frames)
 - PDBTools 2.5.1 (for `pdb_reres`, `pdb_fixinsert`)
 - A conda environment named `plip_analysis` with the following packages:

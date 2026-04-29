@@ -2,17 +2,6 @@
 
 This folder contains the files needed to run the full Heated MD simulation protocol, from minimization through multi-temperature production MD, followed by automatic trajectory compaction, iRMSD calculation, and RMSD plotting.
 
-
----
-
-
-## Prerequisites
-
-- AMBER with GPU support (`pmemd.cuda`) loaded in the environment
-- Python 3.12 with `numpy` and `matplotlib`
-- `cpptraj` (included with AmberTools)
-- Input files from `prepare/` present in this directory
-
 By default, `executable.sh` loads modules:
 
 ```bash
@@ -21,8 +10,6 @@ module load python/3.12.3/gcc13.2/miniconda_24.4.0
 ```
 
 Modify these lines if your environment uses different module names or locally installed software.
-
----
 
 ## Usage
 

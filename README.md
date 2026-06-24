@@ -4,6 +4,8 @@ AutoHMD is a modular pipeline for the automated preparation and execution of Hea
 
 The pipeline automates labor-intensive tasks such as system protonation, terminal capping, and Hydrogen Mass Repartitioning (HMR), while facilitating comprehensive post-processing, including iRMSD calculations, automated plotting, and optional interaction profiling via PLIP integration.
 
+The curated antibody-antigen structure and HMD trajectories dataset, containing over 300 simulations, is available on Zenodo.
+
 ---
 ## Citation
 

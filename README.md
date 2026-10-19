@@ -11,8 +11,7 @@ The curated antibody-antigen structure and HMD trajectories dataset, containing 
 
 If you use AutoHMD in your work, please cite:
 
-> *(citation placeholder — update before publication)*
-
+[Souza JS, Albuquerque AO, Almeida DS, Costa AHS, Sampaio JV, Silva JHM. AutoHMD: Scalable and Accurate Validation of Antibody–Antigen Complexes by Heated Molecular Dynamics. Bioinformatics. 2026; btag757. https://doi.org/10.1093/bioinformatics/btag757](https://doi.org/10.1093/bioinformatics/btag757)
 
 ---
 
